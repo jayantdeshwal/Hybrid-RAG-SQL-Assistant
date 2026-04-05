@@ -8,6 +8,7 @@ This file owns the complete database-question pipeline.
 """
 
 import os
+import re
 from pathlib import Path
 from typing import Optional
 
@@ -59,7 +60,8 @@ def answer_data_question(
     sql_chain = create_sql_query_chain(llm, db)
     execute_query = QuerySQLDatabaseTool(db=db)
 
-    sql_query = sql_chain.invoke({"question": question})
+    raw_sql_output = sql_chain.invoke({"question": question})
+    sql_query = extract_sql_query(raw_sql_output)
     sql_result = execute_query.invoke(sql_query)
 
     answer_prompt = ChatPromptTemplate.from_messages(
@@ -96,3 +98,27 @@ def answer_data_question(
         "answer": final_answer.content,
         "sql_query": sql_query,
     }
+
+
+def extract_sql_query(raw_output: str) -> str:
+    """
+    Extract a clean SQL query from the chain output.
+
+    Some LangChain SQL chains return formatted text like:
+    - Question: ...
+    - SQLQuery: SELECT ...
+
+    This helper pulls out only the executable SQL statement.
+    """
+
+    cleaned_output = raw_output.strip()
+
+    sql_match = re.search(
+        r"SQLQuery:\s*(SELECT[\s\S]*?)(?:\n[A-Za-z]+:|$)",
+        cleaned_output,
+        re.IGNORECASE,
+    )
+    if sql_match:
+        return sql_match.group(1).strip()
+
+    return cleaned_output

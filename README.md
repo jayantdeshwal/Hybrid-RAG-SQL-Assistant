@@ -267,45 +267,6 @@ python -m streamlit run app.py
 
 ---
 
-## Why This Project Is Strong for Interviews
-
-This project demonstrates:
-
-- hybrid AI application design
-- LLM routing
-- retrieval-augmented generation
-- vector search with FAISS
-- text-to-SQL pipelines
-- explainable AI outputs
-- user-uploaded data handling
-- practical Streamlit productization
-
-It is a strong project for discussing:
-
-- AI architecture decisions
-- routing and orchestration
-- retrieval grounding
-- prompt design
-- deployment tradeoffs
-
----
-
-## Deployment Notes
-
-This project can be deployed using:
-
-- Hugging Face Spaces with Docker
-- Docker on a VM or cloud host
-
-FAISS works well for this project as long as:
-
-- the saved vector store is available at runtime, or
-- the index is rebuilt when the app starts
-
-For a small demo or portfolio app, FAISS is a practical and cost-effective choice.
-
----
-
 ## Current Limitations
 
 - uploaded files are stored in local project folders
@@ -328,9 +289,9 @@ For a small demo or portfolio app, FAISS is a practical and cost-effective choic
 
 ## Screenshots
 
-You can add screenshots here after pushing the project to GitHub.
+Add screenshots here after capturing the app interface.
 
-Suggested screenshots:
+Recommended screenshots:
 
 - main chat interface
 - styled sidebar
@@ -341,4 +302,4 @@ Suggested screenshots:
 
 ## License
 
-Add your preferred license here if you plan to make the repository public.
+Jayantdeshwal License
