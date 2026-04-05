@@ -1,3 +1,14 @@
+---
+title: Hybrid RAG + SQL Assistant
+emoji: 🏥
+colorFrom: green
+colorTo: blue
+sdk: docker
+app_port: 7860
+short_description: Streamlit app for document QA with RAG and SQLite QA with SQL generation.
+pinned: false
+---
+
 # Hybrid RAG + SQL Assistant
 
 A Streamlit application that answers both document-based and database-based questions from a single chat interface.
@@ -217,6 +228,21 @@ python -m pip install --user -r requirements.txt
 python -m streamlit run app.py
 ```
 
+### 5. Hugging Face Spaces Secret
+
+If you deploy this project on Hugging Face Spaces, add this repository secret in your Space settings:
+
+```text
+GROQ_API_KEY
+```
+
+Optional variables:
+
+```text
+GROQ_MODEL
+EMBEDDING_MODEL
+```
+
 ---
 
 ## Using the App
@@ -273,6 +299,7 @@ python -m streamlit run app.py
 - uploaded databases replace the active SQLite database file
 - SQLite is the only supported database right now
 - Python 3.14 may show warnings with some LangChain ecosystem packages
+- Hugging Face Spaces storage is ephemeral, so uploaded files may not persist across restarts unless handled externally
 
 ---
 
@@ -283,7 +310,7 @@ python -m streamlit run app.py
 - support CSV and DOCX ingestion
 - add SQL safety guardrails
 - improve main chat answer cards and badges
-- add Docker deployment files
+- add persistent storage strategy for cloud deployments
 
 ---
 
