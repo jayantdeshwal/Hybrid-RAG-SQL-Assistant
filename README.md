@@ -289,14 +289,21 @@ python -m streamlit run app.py
 
 ## Screenshots
 
-Add screenshots here after capturing the app interface.
+### Home Screen
 
-Recommended screenshots:
+![Home Screen](assets/screenshots/Screenshot%202026-04-05%20151126.png)
 
-- main chat interface
-- styled sidebar
-- document upload flow
-- SQL answer with generated query
+### Sidebar and Upload Panel
+
+![Sidebar and Upload Panel](assets/screenshots/Screenshot%202026-04-05%20151353.png)
+
+### RAG Response Example
+
+![RAG Response Example](assets/screenshots/Screenshot%202026-04-05%20151607.png)
+
+### SQL Response Example
+
+![SQL Response Example](assets/screenshots/Screenshot%202026-04-05%20152232.png)
 
 ---
 
