@@ -1,0 +1,15 @@
+Hospital Policy Manual
+
+Visitor Policy
+General visitors are allowed between 10:00 AM and 7:00 PM.
+Only two visitors are allowed per patient at one time in general wards.
+Visitors are not allowed in the ICU except with special permission from the attending doctor.
+
+Discharge Policy
+Patients are discharged only after the attending physician signs the discharge summary.
+The billing desk must confirm that all charges are cleared before final discharge.
+Patients should collect discharge prescriptions and follow-up instructions before leaving the hospital.
+
+Emergency Policy
+Emergency cases are handled on priority regardless of prior appointment.
+Patients arriving with life-threatening symptoms are triaged immediately by the emergency response team.
